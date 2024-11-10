@@ -40,3 +40,95 @@ console.log(Math.round(cislo * 10)/10)
 //kostka
 const hod = Math.ceil(Math.random()*6)
 console.log("kostka " + hod)
+
+//jazyk
+const language = window.navigator.language;
+console.log(language)
+
+//ockovani 
+/*
+const ockName = prompt("Zadej jmeno: ")
+const ockVek = Number(prompt("Zadej vek: "))
+console.log(ockName,  ockVek)
+
+//vydelek
+const plat = Number(prompt("zadej plat: " ))
+console.log(plat * 21 * 8)
+*/
+const apartment = {
+    type: 'rent',
+    disposition: '3+1',
+    area: {
+      floorage: 100,
+      balcony: 2,
+      units: 'sqm',
+    },
+    city: 'Prague',
+    district: 'Old Town',
+    price: {
+      rent: 28000,
+      fees: {
+        water: 1000,
+        energy: 2500,
+        services: 560,
+      },
+      currency: 'czk',
+    },
+    ownership: 'personal',
+    condition: 'renovated',
+    status: 'free',
+    floor: 3,
+  };
+  console.log("dispozice: "+  apartment.disposition)
+  console.log("najem: "+  apartment.price.rent)
+  console.log("plocha", apartment.area.floorage + apartment.area.balcony)
+apartment.status = 'taken'
+console.log(apartment.status)
+
+const kniha = {
+    nazev: 'book1',
+    isbn: '345987',
+    id: { knihovna: '456',
+        city: 'Praha'
+    }
+}
+const kniha2 = {
+    nazev: 'book2',
+    isbn: '345989',
+    id: { knihovna: '786',
+        city: 'Praha'
+    }
+}
+console.log(kniha2.nazev)
+
+const meno = " Krokodýl ";
+console.log(meno.toUpperCase())
+console.log(meno.trim()) //odstraneni prázdných míst
+console.log(meno.slice(0,3)) //vybrýní části
+console.log(meno.indexOf('rok')) //misto výskytu od 0
+console.log(meno.padEnd(15,'01')) //prida nakonec 01 na počet 15 znaku celkem
+//interpolace zptené uvozovky
+
+const order = {
+    id: 37214,
+    product: 'pěnová matrace',
+    delivery: '21.8.2021',
+  };
+document.body.innerHTML += `objednavka ${order.product}`
+
+const title = "Seznamte se Joe Black"
+console.log("film ", title.length)
+console.log(title.toUpperCase())
+console.log(title.slice(0,4))
+console.log(title.slice(title.length-5))
+
+const age = 12
+if (age >=18) { console.log("vstup")}
+else {console.log("nizky věk")}
+
+const vek = prompt("Zadej vek: ")
+const heslo = prompt("zadej heslo: ")
+if (vek >= 65){ 
+    if (heslo.length >5) {console.log("vstup povolen")}
+    else {console.log("kratke heslo")}}
+else {console.log("zamitnuto")}
